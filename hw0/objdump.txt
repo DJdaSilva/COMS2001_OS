@@ -1,0 +1,20 @@
+What file format is used for this binary? What architecture is it compiled for?
+A:
+File format:	elf64-x86-64
+Architecture:	i386:x86-64
+
+What are the names of segments you find?
+A:
+.data, .bss, .ctors, .dtors etc (21 others).
+
+What segment contains wc (the function) and what is it’s address?
+A: The .text segment, 0000000000400614.
+
+What about main?
+A: 0000000000400725
+
+How do these correspond to what you observed in gdb when you were looking at the loaded, executing program?
+A: They are the same addresses in different formats. While the program was running, the adress was given in 0x------ format.
+
+Do you see the stack segment anywhere? What about the heap? Explain.
+A: No, the stack and heap are not visible in the object dump. This is likely because the program is not currently running hence there is no need for the stack/heap as yet.

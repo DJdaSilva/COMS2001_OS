@@ -1,0 +1,20 @@
+Using objdump on the map executable. Which of the addresses from the previous section are defined in the executable, and which segment is each defined in?
+A: Addresses of statically allocated data is visible in the dump namely addresses of "foo" and "stuff". They are in the .data segment.
+There are also functions "main" and "recur" in the .text segment.
+
+Make a list of the important segments, and what they are used for.
+A: Perhaps not most important but most significant to me are:
+.text for functions.
+.data for variables
+
+What direction is the stack growing in?
+A: Negative direction (numbers are increasing).
+
+How large is the stack frame for each recursive call?
+A: 48 bits
+
+Where is the heap? What direction is it growing in?
+A: The heap is shown by the calls to malloc. it is growing in a positive direction.
+
+Are the two malloc()ed memory areas contiguous?
+A: It would appear as though there is 12 bits between them, perhaps to store a pointer to the next variable.

@@ -1,0 +1,10 @@
+All:Main_program
+
+Main_program: main.o
+	gcc main.o -o Main_program
+
+main.o: main.c
+	gcc -c main.c
+
+clean:Main_program
+	rm main.o

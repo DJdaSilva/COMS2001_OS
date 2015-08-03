@@ -1,0 +1,22 @@
+What is the value of infile?
+A: A pointer to where in RAM the file is located (Hex value).
+
+What is the object referenced by infile?
+A: Appears to be another pointer to the ?actual file? with a list of rules/instructions for accessing the file.
+
+What is the value of ofile? How is it different from that of infile? Why?
+A: No "ofile" used in code.
+
+What is the address of the function wc?
+A: 0x400624
+
+Try info stack. Explain what you see.
+A: The functions in the program along with their current variable values are listed i.e. wc with infile and inname as well as main with argc and argv.
+
+Try info frame. Explain what you see.
+A: There is a list of information which details current function as well as variables and parameters for the current function and all the associated RAM locations. The function which called the current function is also listed along with it's memory reference.
+
+Try info registers. Which registers are holding aspects of the program that you recognize?
+A: "rip" holds information regarding wc.
+
+

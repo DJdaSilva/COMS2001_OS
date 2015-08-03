@@ -1,0 +1,10 @@
+All:Map_program
+
+Map_program: map.o
+	gcc map.o -o Map_program
+
+map.o: map.c
+	gcc -c map.c
+
+clean:Map_program
+	rm map.o
